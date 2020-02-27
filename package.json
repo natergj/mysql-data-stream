@@ -1,0 +1,32 @@
+{
+  "name": "beyond-tsc-init-nodejs-runtime",
+  "version": "1.0.0",
+  "description": "Tutorial code for setting up typescript project from scratch to be used as nodejs runtime",
+  "engines": {
+    "node": ">=12.10.0"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:check": "tslint src/**/*.ts",
+    "lint:fix": "tslint --fix src/**/*.ts",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "nodemon --watch src -e ts --exec node --inspect=9229 -r ts-node/register src/index.ts",
+    "export": "ts-node src/index.ts"
+  },
+  "author": "Nater Jorde (nater@iamnater.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.9",
+    "nodemon": "^1.19.3",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3",
+    "typescript-tslint-plugin": "^0.5.4"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0"
+  }
+}
